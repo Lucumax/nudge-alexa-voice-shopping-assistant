@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+data/
+*.jsonl
+*.checkpoint.json
+.nudge-data/
+*.lock
+LEDGER.lock
+checkpoint/
+*.state.json

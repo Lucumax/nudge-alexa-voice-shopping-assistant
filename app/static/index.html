@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="nudge-token" content="__TOKEN__">
+<title>__TITLE__</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-s="ui.skip"></a>
+<header class="top">
+  <div class="navbar">
+    <div class="brand">
+      <h1 data-s="ui.app_name"></h1>
+      <span class="tag" data-s="ui.for_alexa"></span>
+      <span class="badge" data-s="ui.sim_badge"></span>
+    </div>
+    <div class="topbar">
+      <p class="now"><span data-s="ui.demo_date"></span>: <strong id="now"></strong></p>
+      <button id="pause-all" type="button" class="btn"></button>
+    </div>
+  </div>
+  <p class="banner" role="note" data-s="ui.sim_banner"></p>
+</header>
+
+<div id="boot-error" class="bootbar" role="alert" hidden><p id="boot-error-text"></p> <button type="button" id="boot-retry" class="btn primary"></button></div>
+
+<div class="layout">
+  <section id="assistant" class="panel" aria-labelledby="assistant-h">
+    <div class="assistant-head"><span class="ring" aria-hidden="true"></span><h2 id="assistant-h" data-s="ui.assistant"></h2></div>
+    <div id="transcript" class="transcript" role="log" aria-live="polite" tabindex="0" data-s-aria="ui.transcript_label"></div>
+    <p id="stage" class="stage" aria-live="polite"></p>
+    <div id="quick" class="row" hidden>
+      <button type="button" class="btn primary" data-say="yes" data-s="ui.yes"></button>
+      <button type="button" class="btn" data-say="no" data-s="ui.no"></button>
+      <button type="button" class="btn" data-say="not now" data-s="ui.later"></button>
+    </div>
+    <form id="code-form" class="row" hidden>
+      <label for="code-input" data-s="ui.code_label"></label>
+      <input id="code-input" inputmode="numeric" autocomplete="off" maxlength="4" pattern="[0-9]{4}">
+      <button type="submit" class="btn primary" data-s="ui.code_submit"></button>
+    </form>
+    <form id="say-form" class="row">
+      <label for="say-input" data-s="ui.input_label"></label>
+      <input id="say-input" autocomplete="off" maxlength="300">
+      <button type="submit" class="btn primary" data-s="ui.send"></button>
+      <button type="button" id="mic" class="btn" hidden data-s="ui.mic"></button>
+    </form>
+    <div class="phone" aria-labelledby="phone-h">
+      <h3 id="phone-h" data-s="ui.phone_title"></h3>
+      <ul id="phone-list" class="phone-list" aria-live="polite"></ul>
+    </div>
+    <p id="speech-note" class="muted small"></p>
+    <label class="check" id="tts-wrap" hidden><input type="checkbox" id="tts"> <span data-s="ui.read_aloud"></span></label>
+    <div class="chips">
+      <p class="muted" data-s="ui.try_saying"></p>
+      <ul id="chips" class="chiplist"></ul>
+    </div>
+    <details class="mcp"><summary data-s="ui.mcp_log"></summary><p class="muted small" data-s="ui.mcp_hint"></p><ol id="mcp-log" class="small"></ol></details>
+  </section>
+
+  <main id="main" class="panel">
+    <div role="tablist" class="tabs" data-s-aria="ui.app_name">
+      <button role="tab" id="tab-today" aria-controls="p-today" aria-selected="true" data-tab="today" data-s="ui.tab.today"></button>
+      <button role="tab" id="tab-shop" aria-controls="p-shop" aria-selected="false" tabindex="-1" data-tab="shop" data-s="ui.tab.shop"></button>
+      <button role="tab" id="tab-rules" aria-controls="p-rules" aria-selected="false" tabindex="-1" data-tab="rules" data-s="ui.tab.rules"></button>
+      <button role="tab" id="tab-orders" aria-controls="p-orders" aria-selected="false" tabindex="-1" data-tab="orders" data-s="ui.tab.orders"></button>
+      <button role="tab" id="tab-demo" aria-controls="p-demo" aria-selected="false" tabindex="-1" data-tab="demo" data-s="ui.tab.demo"></button>
+    </div>
+
+    <section id="p-today" role="tabpanel" aria-labelledby="tab-today">
+      <div class="dailycheck"><button type="button" id="run" class="btn primary" data-s="ui.run_assistant"></button>
+        <p class="muted small" data-s="ui.run_hint"></p></div>
+      <div id="offers"></div>
+      <h2 data-s="ui.today.ideas"></h2>
+      <div id="ideas" class="cards"></div>
+      <h2 data-s="ui.today.digest"></h2>
+      <div id="digest"></div>
+      <h2 id="needs-h" data-s="ui.today.needs"></h2>
+      <div id="needs"></div>
+      <h2 data-s="ui.today.feed"></h2>
+      <ul id="feed" class="feed"></ul>
+    </section>
+
+    <section id="p-shop" role="tabpanel" aria-labelledby="tab-shop" hidden>
+      <h2 data-s="ui.shop.title"></h2>
+      <p class="muted" data-s="ui.shop.hint"></p>
+      <div id="shelves"></div>
+    </section>
+
+    <section id="p-rules" role="tabpanel" aria-labelledby="tab-rules" hidden>
+      <h2 data-s="ui.rules.title"></h2>
+      <div id="rules"></div>
+    </section>
+
+    <section id="p-orders" role="tabpanel" aria-labelledby="tab-orders" hidden>
+      <h2 data-s="ui.orders.title"></h2>
+      <div class="row">
+        <button type="button" id="verify" class="btn primary" data-s="ui.orders.verify"></button>
+        <p class="muted" data-s="ui.orders.verify_hint"></p>
+      </div>
+      <p id="verify-result" class="result" role="status"></p>
+      <div id="orders"></div>
+    </section>
+
+    <section id="p-demo" role="tabpanel" aria-labelledby="tab-demo" hidden>
+      <h2 data-s="ui.demo.title"></h2>
+      <p class="muted" data-s="ui.demo.note"></p>
+      <div class="row">
+        <button type="button" class="btn" data-profile="demo" data-s="ui.demo.profile_demo"></button>
+        <button type="button" class="btn" data-profile="fresh" data-s="ui.demo.profile_fresh"></button>
+      </div>
+      <h3 data-s="ui.demo.advance"></h3>
+      <div class="row">
+        <button type="button" class="btn" data-hours="1" data-s="ui.demo.h1"></button>
+        <button type="button" class="btn" data-hours="25" data-s="ui.demo.h25"></button>
+        <button type="button" class="btn" data-hours="168" data-s="ui.demo.h168"></button>
+      </div>
+      <fieldset class="fault">
+        <legend data-s="ui.demo.fault"></legend>
+        <div id="faults"></div>
+      </fieldset>
+      <div class="row">
+        <button type="button" id="tamper" class="btn" data-s="ui.demo.tamper"></button>
+      </div>
+      <p id="tamper-result" class="result" role="status"></p>
+      <p id="payments" class="muted"></p>
+    </section>
+  </main>
+</div>
+<footer class="foot"><p data-s="ui.footer"></p></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"><span id="toast-text"></span> <button type="button" id="toast-act" class="btn" hidden></button></div>
+<script src="/app.js"></script>
+</body>
+</html>

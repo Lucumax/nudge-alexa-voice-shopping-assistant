@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nudge explainer (simulation)</title>
+<link rel="stylesheet" href="explainer.css">
+</head>
+<body>
+<div id="viewport">
+<div id="stage" tabindex="0" aria-label="Nudge explainer animation">
+  <div class="badge" data-t="badge"></div>
+  <div class="brand" data-t="brand"></div>
+
+  <template id="tpl-shop">
+    <svg viewBox="0 0 1000 620" role="img" data-ta="shopAria">
+      <rect x="2" y="2" width="996" height="616" rx="24" class="w-frame"/>
+      <rect x="30" y="28" width="150" height="40" rx="10" class="w-block"/>
+      <rect x="300" y="28" width="440" height="40" rx="20" class="w-line"/>
+      <circle cx="880" cy="48" r="20" class="w-block"/><circle cx="940" cy="48" r="20" class="w-block"/>
+      <g class="w-tiles">
+        <g transform="translate(30,100)"><rect width="290" height="240" rx="16" class="w-card"/><circle cx="145" cy="100" r="56" class="w-shape"/><rect x="30" y="184" width="150" height="14" rx="7" class="w-block"/><rect x="30" y="208" width="80" height="14" rx="7" class="w-line"/></g>
+        <g transform="translate(355,100)"><rect width="290" height="240" rx="16" class="w-card"/><rect x="85" y="44" width="120" height="112" rx="18" class="w-shape"/><rect x="30" y="184" width="150" height="14" rx="7" class="w-block"/><rect x="30" y="208" width="80" height="14" rx="7" class="w-line"/></g>
+        <g transform="translate(680,100)"><rect width="290" height="240" rx="16" class="w-card"/><path d="M145 44 L205 150 L85 150 Z" class="w-shape"/><rect x="30" y="184" width="150" height="14" rx="7" class="w-block"/><rect x="30" y="208" width="80" height="14" rx="7" class="w-line"/></g>
+        <g transform="translate(30,370)"><rect width="290" height="220" rx="16" class="w-card"/><rect x="85" y="40" width="120" height="100" rx="50" class="w-shape"/><rect x="30" y="166" width="150" height="14" rx="7" class="w-block"/></g>
+        <g transform="translate(355,370)"><rect width="290" height="220" rx="16" class="w-card"/><circle cx="145" cy="90" r="50" class="w-shape"/><rect x="30" y="166" width="150" height="14" rx="7" class="w-block"/></g>
+        <g transform="translate(680,370)"><rect width="290" height="220" rx="16" class="w-card"/><rect x="85" y="40" width="120" height="100" rx="14" class="w-shape"/><rect x="30" y="166" width="150" height="14" rx="7" class="w-block"/></g>
+      </g>
+    </svg>
+  </template>
+
+  <main id="scenes">
+
+    <section class="scene" id="scene-1" aria-labelledby="s1h">
+      <h2 class="title" id="s1h" data-t="s1_title"></h2>
+      <div class="row">
+        <div class="shop" data-shop></div>
+        <div class="side">
+          <div class="assistant a-in" style="--d:.6s">
+            <div class="avatar" aria-hidden="true"></div>
+            <p data-t="s1_bubble"></p>
+            <span class="fakebtn" data-t="s1_buy"></span>
+          </div>
+          <ul class="ghosts">
+            <li class="a-in" style="--d:2.4s"><i aria-hidden="true">?</i><span data-t="s1_gap1"></span></li>
+            <li class="a-in" style="--d:3.6s"><i aria-hidden="true">?</i><span data-t="s1_gap2"></span></li>
+            <li class="a-in" style="--d:4.8s"><i aria-hidden="true">?</i><span data-t="s1_gap3"></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-8" aria-labelledby="s8h">
+      <h2 class="title" id="s8h" data-t="s8_title"></h2>
+      <div class="callouts" aria-hidden="true">
+        <p class="co co1" data-t="s8_c1"></p>
+        <p class="co co2" data-t="s8_c2"></p>
+        <p class="co co3" data-t="s8_c3"></p>
+        <p class="co co4" data-t="s8_c4"></p>
+        <p class="co co5" data-t="s8_c5"></p>
+      </div>
+      <div class="jwin">
+        <img class="jimg" src="assets/journey_illustration.png" width="1672" height="941" data-ta="s8_alt" alt="">
+        <span class="jtag" data-t="s8_illus"></span>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-2" aria-labelledby="s2h">
+      <h2 class="title" id="s2h" data-t="s2_title"></h2>
+      <div class="row">
+        <div class="shop dim" data-shop></div>
+        <div class="side">
+          <div class="nudgecard a-in" style="--d:.5s">
+            <h3 data-t="s2_card"></h3>
+            <ul class="items">
+              <li class="a-in" style="--d:1.2s"><span class="ico c1"></span><b data-t="s2_i1"></b><em data-t="s2_p1"></em></li>
+              <li class="a-in" style="--d:1.6s"><span class="ico c2"></span><b data-t="s2_i2"></b><em data-t="s2_p2"></em></li>
+              <li class="a-in" style="--d:2s"><span class="ico c3"></span><b data-t="s2_i3"></b><em data-t="s2_p3"></em></li>
+            </ul>
+            <p class="reason a-in" style="--d:3s"><span class="tag" data-t="s2_reasonTag"></span><span data-t="s2_reason"></span></p>
+            <div class="btns">
+              <span class="btn why" data-t="s2_why"></span>
+              <span class="btn ghost" data-t="s2_dismiss"></span>
+            </div>
+            <div class="pop a-in" style="--d:5s"><span data-t="s2_pop"></span></div>
+            <div class="learned a-in" style="--d:7.6s"><span data-t="s2_learned"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-3" aria-labelledby="s3h">
+      <h2 class="title" id="s3h" data-t="s3_title"></h2>
+      <div class="dials">
+        <div class="dial g">
+          <div class="dname" data-t="s3_cat1"></div>
+          <div class="track"><div class="knob"></div>
+            <span class="stop l1" data-t="s3_suggest"></span><span class="stop l2" data-t="s3_ask"></span><span class="stop l3" data-t="s3_within"></span>
+          </div>
+          <div class="approvals"><span data-t="s3_approvals"></span>
+            <i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i></div>
+          <div class="offer"><span data-t="s3_offer"></span></div>
+        </div>
+        <div class="dial h static">
+          <div class="dname" data-t="s3_cat2"></div>
+          <div class="track"><div class="knob mid"></div>
+            <span class="stop" data-t="s3_suggest"></span><span class="stop on" data-t="s3_ask"></span><span class="stop" data-t="s3_within"></span></div>
+        </div>
+        <div class="dial k static">
+          <div class="dname" data-t="s3_cat3"></div>
+          <div class="track"><div class="knob lo"></div>
+            <span class="stop on" data-t="s3_suggest"></span><span class="stop" data-t="s3_ask"></span><span class="stop" data-t="s3_within"></span></div>
+        </div>
+        <p class="rule a-in" style="--d:9s" data-t="s3_rule"></p>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-4" aria-labelledby="s4h">
+      <h2 class="title" id="s4h" data-t="s4_title"></h2>
+      <div class="row v">
+        <div class="voice">
+          <div class="mic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="18" y="6" width="12" height="24" rx="6"/><path d="M10 22 a14 14 0 0 0 28 0 M24 36 v6" fill="none" stroke-width="3" stroke-linecap="round"/></svg></div>
+          <div class="wave" id="wave" aria-hidden="true"></div>
+          <p class="said a-in" style="--d:.4s" data-t="s4_say"></p>
+        </div>
+        <div class="readback a-in" style="--d:1.2s">
+          <h3 data-t="s4_read"></h3>
+          <dl>
+            <div class="a-in" style="--d:2s"><dt data-t="s4_k1"></dt><dd data-t="s4_v1"></dd></div>
+            <div class="a-in" style="--d:2.8s"><dt data-t="s4_k2"></dt><dd data-t="s4_v2"></dd></div>
+            <div class="a-in" style="--d:3.6s"><dt data-t="s4_k3"></dt><dd data-t="s4_v3"></dd></div>
+            <div class="a-in" style="--d:4.4s"><dt data-t="s4_k4"></dt><dd data-t="s4_v4"></dd></div>
+            <div class="a-in" style="--d:5.2s"><dt data-t="s4_k5"></dt><dd data-t="s4_v5"></dd></div>
+          </dl>
+          <div class="yes a-in" style="--d:6.2s"><span data-t="s4_yes"></span></div>
+        </div>
+        <div class="phone a-in" style="--d:7.4s">
+          <div class="pscreen">
+            <div class="plabel" data-t="s4_phone"></div>
+            <div class="code"><i></i><i></i><i></i><i></i></div>
+            <div class="pnote" data-t="s4_phoneNote"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-5" aria-labelledby="s5h">
+      <h2 class="title" id="s5h" data-t="s5_title"></h2>
+      <svg class="diagram" viewBox="0 0 1760 640" role="img" data-ta="s5_aria">
+        <defs><marker id="arr" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11 Z" class="arrowhead"/></marker></defs>
+        <g class="node n1"><rect x="0" y="140" width="300" height="260" rx="28"/><text x="150" y="215" class="nt" data-t="s5_n1"></text><text x="150" y="258" class="ns" data-t="s5_n1s"></text><text x="150" y="296" class="ns" data-t="s5_n1s2"></text></g>
+        <line class="wire" x1="306" y1="270" x2="480" y2="270" marker-end="url(#arr)"/>
+        <text x="393" y="208" class="lbl" data-t="s5_w1a"></text><text x="393" y="238" class="lbl" data-t="s5_w1b"></text>
+        <g class="node n2"><rect x="486" y="140" width="300" height="260" rx="28"/><text x="636" y="205" class="nt" data-t="s5_n2"></text><text x="636" y="244" class="ns" data-t="s5_n2s"></text>
+          <g class="chip allow"><rect x="500" y="290" width="86" height="56" rx="14"/><text x="543" y="326" data-t="s5_allow"></text></g>
+          <g class="chip ask"><rect x="593" y="290" width="86" height="56" rx="14"/><text x="636" y="326" data-t="s5_ask"></text></g>
+          <g class="chip deny"><rect x="686" y="290" width="86" height="56" rx="14"/><text x="729" y="326" data-t="s5_deny"></text></g></g>
+        <line class="wire" x1="792" y1="270" x2="966" y2="270" marker-end="url(#arr)"/>
+        <text x="879" y="238" class="lbl" data-t="s5_w2"></text>
+        <g class="node n3"><rect x="972" y="140" width="300" height="260" rx="28"/><text x="1122" y="215" class="nt" data-t="s5_n3"></text><text x="1122" y="258" class="ns" data-t="s5_n3s"></text><text x="1122" y="296" class="ns" data-t="s5_n3s2"></text></g>
+        <line class="wire" x1="1278" y1="270" x2="1452" y2="270" marker-end="url(#arr)"/>
+        <text x="1365" y="238" class="lbl" data-t="s5_w3"></text>
+        <g class="node n4"><rect x="1458" y="140" width="300" height="260" rx="28"/><text x="1608" y="215" class="nt" data-t="s5_n4"></text><text x="1608" y="258" class="ns" data-t="s5_n4s"></text><text x="1608" y="296" class="ns" data-t="s5_n4s2"></text></g>
+        <g class="chain">
+          <rect x="1458" y="450" width="80" height="64" rx="12"/><rect x="1568" y="450" width="80" height="64" rx="12"/><rect x="1678" y="450" width="80" height="64" rx="12"/>
+          <line x1="1538" y1="482" x2="1566" y2="482"/><line x1="1648" y1="482" x2="1676" y2="482"/>
+          <text x="1498" y="490" data-t="s5_r1"></text><text x="1608" y="490" data-t="s5_r2"></text><text x="1718" y="490" data-t="s5_r3"></text>
+        </g>
+        <g class="verify"><rect x="1458" y="548" width="300" height="64" rx="32"/><path d="M1500 580 l14 14 l28 -30" fill="none"/><text x="1650" y="590" data-t="s5_verify"></text></g>
+        <circle class="packet" cx="150" cy="270" r="16"/>
+      </svg>
+    </section>
+
+    <section class="scene" id="scene-6" aria-labelledby="s6h">
+      <h2 class="title" id="s6h" data-t="s6_title"></h2>
+      <div class="flow">
+        <div class="step a-in" style="--d:.4s"><b data-t="s6_a"></b><span data-t="s6_as"></span></div>
+        <i class="arrow" aria-hidden="true"></i>
+        <div class="step a-in warn" style="--d:1.8s"><b data-t="s6_b"></b><span data-t="s6_bs"></span><div class="spin" aria-hidden="true"></div></div>
+        <i class="arrow" aria-hidden="true"></i>
+        <div class="step a-in" style="--d:3.4s"><b data-t="s6_c"></b><span data-t="s6_cs"></span></div>
+        <i class="arrow" aria-hidden="true"></i>
+        <div class="step ok a-in" style="--d:5s"><b data-t="s6_d"></b><span data-t="s6_ds"></span></div>
+      </div>
+      <div class="lower">
+        <div class="never a-in" style="--d:5.8s"><span class="strike" data-t="s6_second"></span><strong data-t="s6_never"></strong></div>
+        <div class="undo a-in" style="--d:7s">
+          <div class="uhead" data-t="s6_undo"></div>
+          <div class="ubar"><div class="ufill"></div></div>
+          <div class="ubtn"><span class="btn" data-t="s6_undoBtn"></span><span class="done" data-t="s6_undone"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-7" aria-labelledby="s7h">
+      <h2 class="title" id="s7h" data-t="s7_title"></h2>
+      <div class="promises">
+        <div class="promise a-in" style="--d:.5s"><i>1</i><b data-t="s7_p1"></b><span data-t="s7_p1s"></span></div>
+        <div class="promise a-in" style="--d:1.7s"><i>2</i><b data-t="s7_p2"></b><span data-t="s7_p2s"></span></div>
+        <div class="promise a-in" style="--d:2.9s"><i>3</i><b data-t="s7_p3"></b><span data-t="s7_p3s"></span></div>
+      </div>
+      <div class="foot a-in" style="--d:4.4s">
+        <div><code data-t="s7_open"></code></div>
+        <p data-t="s7_disc"></p>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-9" aria-labelledby="s9h">
+      <h2 class="sr" id="s9h" data-t="s9_title"></h2>
+      <p class="notice a-in" style="--d:.3s" data-t="s9_notice"></p>
+    </section>
+  </main>
+
+  <div id="caption" role="status" aria-live="polite"><span id="captionText"></span></div>
+  <div id="progress" aria-hidden="true"></div>
+</div>
+
+<div id="controls" role="toolbar" aria-label="Playback controls">
+  <button id="bPause" type="button" data-t="ui_pause"></button>
+  <button id="bPrev" type="button" data-t="ui_prev"></button>
+  <button id="bNext" type="button" data-t="ui_next"></button>
+  <button id="bRestart" type="button" data-t="ui_restart"></button>
+  <button id="bCaps" type="button" aria-pressed="true" data-t="ui_caps"></button>
+  <button id="bProg" type="button" aria-pressed="true" data-t="ui_prog"></button>
+  <button id="bFull" type="button" data-t="ui_full"></button>
+  <span class="hint" data-t="ui_hint"></span>
+</div>
+</div>
+<script src="explainer.js"></script>
+</body>
+</html>

@@ -1,0 +1,1078 @@
+{
+ "_meta": {
+  "note": "User-facing interface strings used by the app. Keys are stable; placeholders in braces are filled by the app."
+ },
+ "strings": {
+  "cat.groceries": {
+   "text": "Groceries"
+  },
+  "cat.household": {
+   "text": "Household"
+  },
+  "cat.gifts": {
+   "text": "Gifts"
+  },
+  "tier.suggest": {
+   "text": "Suggest"
+  },
+  "tier.ask": {
+   "text": "Ask first"
+  },
+  "tier.limits": {
+   "text": "Within limits"
+  },
+  "scope.all": {
+   "text": "everything"
+  },
+  "channel.voice": {
+   "text": "voice"
+  },
+  "channel.digest": {
+   "text": "the daily digest"
+  },
+  "channel.tap": {
+   "text": "a tap"
+  },
+  "when.fmt": {
+   "text": "{date}, {time}"
+  },
+  "delivery.fmt": {
+   "text": "FREE delivery {date}"
+  },
+  "rating.fmt": {
+   "text": "{rating} out of 5 (sample data)"
+  },
+  "returns.days": {
+   "text": "Free returns within {days} days"
+  },
+  "returns.perishable": {
+   "text": "Refund if it arrives not right"
+  },
+  "card.last4": {
+   "text": "Card ending {last4}"
+  },
+  "hello.demo": {
+   "text": "Hi Maya. This is a simulation. I have ideas for you and I will always say why. I never buy anything without the rules you set. Try: What is my rule?"
+  },
+  "hello.fresh": {
+   "text": "Hi. This is a simulation. Nothing is turned on yet. Turn on ideas for a category in Rules and I will start there."
+  },
+  "reason.restock": {
+   "text": "You bought {product} on {last}. You usually reorder about every {cycle} days, and it has been {days}."
+  },
+  "reason.price_drop": {
+   "text": "You bought {product} on {last} at {old}. It is {new} now."
+  },
+  "reason.reminder": {
+   "text": "On {note} you set a gift reminder for {event}. This is an idea for you, not a purchase."
+  },
+  "why.card": {
+   "text": "You are seeing this because you turned on ideas for {cat} on {since}. Nudge uses just the things you did here: past orders, reminders you set, and prices of items you bought before. There are no timers and no stock counts. Dismiss it and Nudge will adjust."
+  },
+  "learn.not_interested": {
+   "text": "Got it. I will not suggest {product} again."
+  },
+  "learn.have_it": {
+   "text": "Got it. I will not suggest {product} for 30 days."
+  },
+  "learn.too_soon": {
+   "text": "Got it. I will wait 7 days before suggesting {product} again."
+  },
+  "learn.price": {
+   "text": "Got it. I will not suggest {product} again."
+  },
+  "learn.fewer": {
+   "text": "You dismissed three {cat} ideas in a row, so I will show only one idea at a time now. You can turn ideas off in Rules."
+  },
+  "reason.WITHIN_MANDATE": {
+   "text": "This was inside your limits, so no extra yes was needed."
+  },
+  "reason.AMOUNT_OVER_PER_PAYMENT_LIMIT": {
+   "text": "Nudge may not buy this alone, so it needed your yes."
+  },
+  "reason.DAILY_LIMIT_EXCEEDED": {
+   "text": "This went past your daily limit, so it needed your yes."
+  },
+  "reason.PAYEE_NOT_ALLOWLISTED": {
+   "text": "This store is not on the list, so Nudge did not buy it."
+  },
+  "reason.PURPOSE_NOT_PERMITTED": {
+   "text": "This category is not allowed, so Nudge did not buy it."
+  },
+  "reason.MANDATE_EXPIRED": {
+   "text": "The rule had ended, so Nudge did not buy it."
+  },
+  "reason.MANDATE_NOT_FOUND": {
+   "text": "There was no rule for this, so Nudge did not buy it."
+  },
+  "reason.AMOUNT_NOT_POSITIVE": {
+   "text": "The amount was not valid, so Nudge did not buy it."
+  },
+  "reason.CURRENCY_MISMATCH": {
+   "text": "The currency did not match, so Nudge did not buy it."
+  },
+  "did_not.AMOUNT_OVER_PER_PAYMENT_LIMIT": {
+   "text": "I did not buy {item} on my own. It is above your {item_lim} limit per item. It is waiting for your yes."
+  },
+  "did_not.DAILY_LIMIT_EXCEEDED": {
+   "text": "I did not buy {item} on my own. It would pass your {day_lim} daily limit. It is waiting for your yes."
+  },
+  "did_not.PAYEE_NOT_ALLOWLISTED": {
+   "text": "I did not buy {item} on my own. {merchant} is not one of the stores you approved for this. It is waiting for your yes."
+  },
+  "did_not.MANDATE_EXPIRED": {
+   "text": "I did not buy {item} on my own. Your rule for it has ended. It is waiting for your yes."
+  },
+  "did_not.PURPOSE_NOT_PERMITTED": {
+   "text": "I did not buy {item} on my own. That category is not in your rule. It is waiting for your yes."
+  },
+  "did_not.MANDATE_NOT_FOUND": {
+   "text": "I did not buy {item} on my own. There is no rule for it. It is waiting for your yes."
+  },
+  "did_not.AMOUNT_NOT_POSITIVE": {
+   "text": "I did not buy {item}. The amount was not valid."
+  },
+  "did_not.CURRENCY_MISMATCH": {
+   "text": "I did not buy {item}. The currency did not match."
+  },
+  "did_not.PAUSED": {
+   "text": "I did not prepare {item}. {cat} is paused."
+  },
+  "intent.reason.shop": {
+   "text": "You tapped to buy"
+  },
+  "intent.reason.suggestion": {
+   "text": "You tapped an idea card"
+  },
+  "intent.reason.assistant": {
+   "text": "Prepared by the daily check"
+  },
+  "source.auto": {
+   "text": "Bought by Nudge inside your limits"
+  },
+  "source.shop": {
+   "text": "You tapped Shop"
+  },
+  "source.suggestion": {
+   "text": "You tapped an idea"
+  },
+  "source.assistant": {
+   "text": "Prepared by Nudge, approved by you"
+  },
+  "mandate.suggest": {
+   "text": "Nudge may not buy {cat} items by itself. It shows ideas and you decide."
+  },
+  "mandate.ask": {
+   "text": "Nudge may not buy {cat} items by itself. It prepares orders and asks for your yes each time."
+  },
+  "mandate.limits": {
+   "text": "Nudge may buy {cat} items up to {item} each and {day} a day from {merchants}, until {until}. Anything else it asks you first, and anything at {cap} or more always needs a code on your phone."
+  },
+  "mandate.paused": {
+   "text": "{cat} is paused. Nudge will not buy or prepare anything by itself."
+  },
+  "rules.same": {
+   "text": "{cat} is already set that way."
+  },
+  "confirm.tier": {
+   "text": "You want to give Nudge more room for {cat}: {tier}. Say yes to confirm."
+  },
+  "confirm.tier_limits": {
+   "text": "That means up to {item} each and {day} a day from {merchants}."
+  },
+  "confirm.limit": {
+   "text": "Raise the {which} for {cat} to {amount}? Say yes to confirm."
+  },
+  "limit.item": {
+   "text": "limit per item"
+  },
+  "limit.day": {
+   "text": "limit per day"
+  },
+  "limit.clamped": {
+   "text": "The most Nudge can do alone is {cap} per item, because {step} or more always needs a code on your phone."
+  },
+  "limit.stored": {
+   "text": "Saved limits of {item} each and {day} a day for {cat}. They apply only if you turn on Within limits."
+  },
+  "log.enabled": {
+   "text": "You turned on ideas for {cat}."
+  },
+  "log.disabled": {
+   "text": "You turned off ideas for {cat}."
+  },
+  "log.tier": {
+   "text": "{cat} changed from {old} to {new}."
+  },
+  "log.limit": {
+   "text": "{cat} {which} is now {amount}."
+  },
+  "log.pause": {
+   "text": "Paused {scope}. Nudge will not buy or prepare anything by itself."
+  },
+  "log.resume": {
+   "text": "Resumed {scope}."
+  },
+  "offer.ask": {
+   "text": "You have approved three {cat} orders. Want me to prepare {cat} orders for you and ask each time? Say yes or tap below."
+  },
+  "offer.limits": {
+   "text": "You have approved three {cat} orders. Want me to handle small ones? I would buy up to {item} each and {day} a day from {merchants}. Anything else I would still ask about. This rule would end on {until}. Say yes or tap below."
+  },
+  "offer.accepted": {
+   "text": "Done. {cat} has moved up. You can pause or change it any time."
+  },
+  "offer.declined": {
+   "text": "No problem. {cat} stays as it is. I will ask again after three more approvals."
+  },
+  "log.offer_declined": {
+   "text": "You said not now to a step up for {cat}."
+  },
+  "reset.note": {
+   "text": "I moved {cat} back to Ask first."
+  },
+  "reset.why.undo": {
+   "text": "you undid an order I placed"
+  },
+  "reset.why.problem": {
+   "text": "you reported a problem"
+  },
+  "log.reset": {
+   "text": "{cat} moved back to Ask first because {why}."
+  },
+  "readback.one": {
+   "text": "Buying {item} from {merchant} for {amount}. It arrives {date}. Card ending {last4}."
+  },
+  "readback.qty": {
+   "text": "{qty} of {item}"
+  },
+  "readback.line": {
+   "text": "{item} from {merchant}, {amount}, arrives {date}."
+  },
+  "readback.many": {
+   "text": "Approving {count} orders. {lines} Total {total}. Card ending {last4}."
+  },
+  "readback.ask": {
+   "text": "Say yes to buy, or no."
+  },
+  "stepup.why": {
+   "text": "This is {limit} or more, so I need an extra check."
+  },
+  "stepup.why_total": {
+   "text": "The total is {limit} or more, so I need an extra check."
+  },
+  "stepup.ask": {
+   "text": "I sent a 4 digit code to your phone. Type it here."
+  },
+  "stepup.wrong": {
+   "text": "That code does not match. {left} tries left."
+  },
+  "stepup.locked": {
+   "text": "Too many wrong codes. Nothing was bought. The orders are still waiting."
+  },
+  "stepup.expired": {
+   "text": "That code ran out of time. Nothing was bought. The orders are still waiting."
+  },
+  "log.stepup_locked": {
+   "text": "Three wrong codes. Nothing was bought."
+  },
+  "phone.code": {
+   "text": "Your Nudge code is {code}. It approves {amount}. Do not share it."
+  },
+  "transcript.code_hidden": {
+   "text": "(code entered)"
+  },
+  "done.one": {
+   "text": "Done. {item} is ordered. It arrives {date}. You can undo it for {hours} hours."
+  },
+  "done.many": {
+   "text": "Done. {count} orders placed. You can undo them for {hours} hours."
+  },
+  "done.unknown": {
+   "text": "I could not confirm that {item} went through. I will not charge you twice. Use Check with the store."
+  },
+  "done.failed": {
+   "text": "{count} order did not go through. You were not charged."
+  },
+  "session.declined": {
+   "text": "Okay. I did not buy it."
+  },
+  "session.later": {
+   "text": "Okay. It stays on your list. Nothing was bought."
+  },
+  "session.reask": {
+   "text": "I need a yes or a no first."
+  },
+  "log.bought": {
+   "text": "Bought {item} from {merchant} for {amount}. You approved by {channel}."
+  },
+  "log.auto_bought": {
+   "text": "Bought {item} from {merchant} for {amount} by myself, inside your limits."
+  },
+  "log.prepared": {
+   "text": "Prepared {item} for {amount}. It is waiting for your yes."
+  },
+  "log.declined": {
+   "text": "You declined {item}. Nothing was bought."
+  },
+  "log.unknown": {
+   "text": "I could not confirm {item}. It may or may not have gone through. I will check before I try again."
+  },
+  "log.failed": {
+   "text": "{item} did not go through. You were not charged."
+  },
+  "log.approval_error": {
+   "text": "I could not approve {item} ({code}). Nothing was bought."
+  },
+  "log.nothing_due": {
+   "text": "Nothing is due right now. I will say why when something is."
+  },
+  "log.expired": {
+   "text": "The request for {item} ran out of time. Nothing was bought."
+  },
+  "log.advanced": {
+   "text": "The demo clock moved forward {hours} hours to {now}."
+  },
+  "log.undo": {
+   "text": "Undid {item} and refunded {amount}."
+  },
+  "log.problem": {
+   "text": "You reported a problem with {item}."
+  },
+  "undo.done": {
+   "text": "Undone. {item} is cancelled and {amount} is refunded."
+  },
+  "undo.until": {
+   "text": "You can undo this until {when}."
+  },
+  "undo.closed": {
+   "text": "The undo window has closed. {returns}."
+  },
+  "problem.thanks": {
+   "text": "Sorry about {item}. I have noted it on the receipt."
+  },
+  "problem.already_asks": {
+   "text": "{cat} already asks before buying, so nothing changes there."
+  },
+  "reconcile.found": {
+   "text": "The store did accept {item}. It is one order, charged once."
+  },
+  "reconcile.unsure": {
+   "text": "The store did not give a clear answer about {item}, so the outcome is still unknown. Nothing will be retried until it can be checked."
+  },
+  "reconcile.none": {
+   "text": "The store has no record of {item}. You were not charged."
+  },
+  "retry.done": {
+   "text": "Tried again with the same request number. {item} went through once."
+  },
+  "retry.still": {
+   "text": "Still not sure about {item}. Nothing was charged twice."
+  },
+  "story.intro": {
+   "text": "On {when}, Nudge asked to buy {item} from {merchant} for {amount} ({cat})."
+  },
+  "story.rule": {
+   "text": "Rule {rule}: {what}"
+  },
+  "story.approved": {
+   "text": "You approved by {channel}{step}."
+  },
+  "story.step_up": {
+   "text": " with a phone code"
+  },
+  "story.denied": {
+   "text": "You declined it."
+  },
+  "story.result": {
+   "text": "Result: {result}"
+  },
+  "status.PENDING_APPROVAL": {
+   "text": "Waiting for your yes"
+  },
+  "status.AUTHORIZED": {
+   "text": "Approved, not sent yet"
+  },
+  "status.SUBMITTING": {
+   "text": "Sending"
+  },
+  "status.SUCCEEDED": {
+   "text": "Ordered"
+  },
+  "status.FAILED": {
+   "text": "Did not go through"
+  },
+  "status.UNKNOWN": {
+   "text": "Not sure yet"
+  },
+  "status.BLOCKED": {
+   "text": "Blocked"
+  },
+  "status.DENIED": {
+   "text": "Declined"
+  },
+  "status.EXPIRED": {
+   "text": "Ran out of time"
+  },
+  "status.CANCELLED": {
+   "text": "Undone and refunded"
+  },
+  "statushelp.PENDING_APPROVAL": {
+   "text": "Nothing was bought. It is waiting for your yes."
+  },
+  "statushelp.AUTHORIZED": {
+   "text": "Approved and saved before sending."
+  },
+  "statushelp.SUBMITTING": {
+   "text": "Being sent to the store."
+  },
+  "statushelp.SUCCEEDED": {
+   "text": "The simulated store accepted the order."
+  },
+  "statushelp.FAILED": {
+   "text": "The store did not accept it. You were not charged."
+  },
+  "statushelp.UNKNOWN": {
+   "text": "The store did not answer. It may or may not have gone through. You will not be charged twice."
+  },
+  "statushelp.BLOCKED": {
+   "text": "A rule said no. Nothing was bought."
+  },
+  "statushelp.DENIED": {
+   "text": "You said no. Nothing was bought."
+  },
+  "statushelp.EXPIRED": {
+   "text": "No answer in time. Nothing was bought."
+  },
+  "statushelp.CANCELLED": {
+   "text": "You undid it within the window. The simulated refund is done."
+  },
+  "verify.ok": {
+   "text": "Receipts verified. {n} records, none changed."
+  },
+  "verify.broken": {
+   "text": "Receipt check failed. First broken record: {id} ({code})."
+  },
+  "tamper.result": {
+   "text": "On a copy, one amount was edited. Verify names the first broken record: {id} ({code}). Your real receipts were not touched."
+  },
+  "cmd.ok_nothing": {
+   "text": "Okay. Nothing changed."
+  },
+  "cmd.paused": {
+   "text": "Paused {scope}. I will not buy or prepare anything by myself."
+  },
+  "cmd.resumed": {
+   "text": "Resumed {scope}."
+  },
+  "cmd.limit_missing": {
+   "text": "Tell me the amount, for example: set groceries limit to 30 dollars."
+  },
+  "cmd.no_rules": {
+   "text": "No category is turned on yet."
+  },
+  "cmd.pending": {
+   "text": "{count} orders are waiting for your yes. Say approve my digest, or open Today."
+  },
+  "cmd.nothing_waiting": {
+   "text": "Nothing is waiting for you."
+  },
+  "cmd.nothing_yet": {
+   "text": "Nothing has happened yet."
+  },
+  "cmd.nothing_to_confirm": {
+   "text": "There is nothing to confirm right now."
+  },
+  "cmd.unknown": {
+   "text": "I did not catch that. You can say: what is my rule, pause groceries, set groceries limit to 30 dollars, approve my digest, or undo my last order."
+  },
+  "err.STORAGE_ERROR": {
+   "text": "The simulated store could not save that, so it may or may not have gone through. Check Orders and receipts before you try again, then restart the demo."
+  },
+  "err.RESTART_REQUIRED": {
+   "text": "A save failed earlier, so Nudge has stopped taking actions until it is restarted. Check Orders and receipts after the restart."
+  },
+  "err.BAD_REQUEST": {
+   "text": "That request was not valid."
+  },
+  "err.NEED_HISTORY": {
+   "text": "Approve a few {cat} orders first, so I know which stores you trust."
+  },
+  "err.NO_OFFER": {
+   "text": "There is no offer to answer."
+  },
+  "err.NOT_PENDING": {
+   "text": "That order is not waiting for a yes."
+  },
+  "err.NOTHING_TO_APPROVE": {
+   "text": "There is nothing to approve."
+  },
+  "err.NO_CODE_PENDING": {
+   "text": "No code is being asked for."
+  },
+  "err.NOT_FOUND": {
+   "text": "I could not find that order."
+  },
+  "err.UNDO_NOT_AVAILABLE": {
+   "text": "There is no recent order to undo."
+  },
+  "err.UNDO_WINDOW_CLOSED": {
+   "text": "The undo window has closed. {returns}."
+  },
+  "err.NO_PROBLEM_REPORT": {
+   "text": "A problem cannot be reported on this order."
+  },
+  "err.NOT_UNKNOWN": {
+   "text": "That order does not need a check."
+  },
+  "err.NOTHING_TO_TAMPER": {
+   "text": "There is no completed order to use for the demo."
+  },
+  "err.FORBIDDEN": {
+   "text": "That request was blocked."
+  },
+  "err.BAD_JSON": {
+   "text": "That request could not be read."
+  },
+  "err.NOT_FOUND_ROUTE": {
+   "text": "Not found."
+  },
+  "ui.app_name": {
+   "text": "Nudge"
+  },
+  "ui.for_alexa": {
+   "text": "for Alexa+"
+  },
+  "ui.prime": {
+   "text": "Prime"
+  },
+  "ui.sim_badge": {
+   "text": "SIMULATION"
+  },
+  "ui.sim_banner": {
+   "text": "This is a simulated voice assistant. The purchase step is a mock. No real store, card, or phone is involved."
+  },
+  "ui.demo_date": {
+   "text": "Demo date"
+  },
+  "ui.pause_all": {
+   "text": "Pause everything"
+  },
+  "ui.resume_all": {
+   "text": "Resume everything"
+  },
+  "ui.skip": {
+   "text": "Skip to content"
+  },
+  "ui.tab.today": {
+   "text": "Today"
+  },
+  "ui.tab.shop": {
+   "text": "Shop"
+  },
+  "ui.tab.rules": {
+   "text": "Rules"
+  },
+  "ui.tab.orders": {
+   "text": "Orders and receipts"
+  },
+  "ui.tab.demo": {
+   "text": "Demo controls"
+  },
+  "ui.assistant": {
+   "text": "Assistant (simulated voice)"
+  },
+  "ui.transcript_label": {
+   "text": "Conversation"
+  },
+  "ui.input_label": {
+   "text": "Type what you would say"
+  },
+  "ui.send": {
+   "text": "Send"
+  },
+  "ui.mic": {
+   "text": "Speak"
+  },
+  "ui.mic_listening": {
+   "text": "Listening"
+  },
+  "ui.mic_unavailable": {
+   "text": "Speech input is not available in this browser. Typing works the same way."
+  },
+  "ui.mic_note": {
+   "text": "Speech input uses your browser's own speech service, which may send audio to its provider. It is off until you press Speak."
+  },
+  "ui.read_aloud": {
+   "text": "Read replies aloud"
+  },
+  "ui.tts_unavailable": {
+   "text": "Reading aloud is not available in this browser."
+  },
+  "ui.try_saying": {
+   "text": "Try saying"
+  },
+  "ui.chip.rule": {
+   "text": "What is my rule?"
+  },
+  "ui.chip.digest": {
+   "text": "Approve my digest"
+  },
+  "ui.chip.pause": {
+   "text": "Pause everything"
+  },
+  "ui.chip.undo": {
+   "text": "Undo my last order"
+  },
+  "ui.chip.limit": {
+   "text": "Set groceries limit to 30 dollars"
+  },
+  "ui.chip.fewer": {
+   "text": "Set household to within limits"
+  },
+  "ui.phone_title": {
+   "text": "Your phone (simulated)"
+  },
+  "ui.phone_empty": {
+   "text": "No messages yet. A code arrives here when an order needs an extra check."
+  },
+  "ui.code_label": {
+   "text": "Code from your phone"
+  },
+  "ui.code_submit": {
+   "text": "Confirm code"
+  },
+  "ui.yes": {
+   "text": "Yes"
+  },
+  "ui.no": {
+   "text": "No"
+  },
+  "ui.later": {
+   "text": "Not now"
+  },
+  "ui.who.assistant": {
+   "text": "Nudge"
+  },
+  "ui.who.you": {
+   "text": "You"
+  },
+  "ui.who.phone": {
+   "text": "Phone"
+  },
+  "ui.today.ideas": {
+   "text": "We thought you'd like these"
+  },
+  "ui.today.ideas_empty": {
+   "text": "Nothing to suggest right now. An idea appears when there is a reason, and the reason is always shown."
+  },
+  "ui.today.ideas_off": {
+   "text": "Ideas are off until you turn them on for a category in Rules."
+  },
+  "ui.today.digest": {
+   "text": "Tonight's digest"
+  },
+  "ui.digest.empty": {
+   "text": "Nothing is waiting for approval."
+  },
+  "ui.digest.approve": {
+   "text": "Approve all {count} for {total}"
+  },
+  "ui.digest.hint": {
+   "text": "Small orders Nudge prepared. One yes covers all of them. Each still gets its own receipt."
+  },
+  "ui.digest.remove": {
+   "text": "Leave out"
+  },
+  "ui.digest.stepup": {
+   "text": "The total is at or above the code limit, so a phone code will be asked for."
+  },
+  "ui.today.needs": {
+   "text": "Needs your yes and a phone code"
+  },
+  "ui.today.feed": {
+   "text": "What Nudge did, and what it did not do"
+  },
+  "ui.feed.empty": {
+   "text": "Nothing yet."
+  },
+  "ui.run_assistant": {
+   "text": "Run Nudge's daily check"
+  },
+  "ui.run_hint": {
+   "text": "Simulates the assistant's scheduled check. What it does depends on your rules."
+  },
+  "ui.offer.accept": {
+   "text": "Yes, switch"
+  },
+  "ui.offer.decline": {
+   "text": "Not now"
+  },
+  "ui.offer.title": {
+   "text": "A suggestion from Nudge"
+  },
+  "ui.card.why": {
+   "text": "Why am I seeing this?"
+  },
+  "ui.card.dismiss": {
+   "text": "Dismiss"
+  },
+  "ui.card.buy": {
+   "text": "Review and buy"
+  },
+  "ui.card.ready": {
+   "text": "Ready for your yes"
+  },
+  "ui.card.reason": {
+   "text": "Reason"
+  },
+  "ui.card.sample": {
+   "text": "Sample product. The picture is illustrative."
+  },
+  "ui.card.stepup": {
+   "text": "Needs a phone code at {limit} or more"
+  },
+  "ui.dismiss.title": {
+   "text": "Tell Nudge why. It will learn."
+  },
+  "ui.dismiss.not_interested": {
+   "text": "Not interested"
+  },
+  "ui.dismiss.have_it": {
+   "text": "I already have it"
+  },
+  "ui.dismiss.too_soon": {
+   "text": "Too soon"
+  },
+  "ui.dismiss.price": {
+   "text": "The price is not right"
+  },
+  "ui.dismiss.cancel": {
+   "text": "Cancel"
+  },
+  "ui.shop.title": {
+   "text": "Shop"
+  },
+  "ui.shop.hint": {
+   "text": "Tap Review and buy. Nudge reads the order back and waits for your yes."
+  },
+  "ui.shop.carousel": {
+   "text": "{cat} products"
+  },
+  "ui.carousel.prev": {
+   "text": "Previous products"
+  },
+  "ui.carousel.next": {
+   "text": "Next products"
+  },
+  "ui.rules.title": {
+   "text": "Your rules"
+  },
+  "ui.rules.dial": {
+   "text": "How much may Nudge do for {cat}?"
+  },
+  "ui.rules.on": {
+   "text": "Show me ideas for {cat}"
+  },
+  "ui.tier.suggest.desc": {
+   "text": "Nudge shows ideas. You decide and buy."
+  },
+  "ui.tier.ask.desc": {
+   "text": "Nudge prepares orders and asks for your yes each time."
+  },
+  "ui.tier.limits.desc": {
+   "text": "Nudge buys small things by itself inside the limits below. Everything else it asks about."
+  },
+  "ui.rules.item": {
+   "text": "Most per item (dollars)"
+  },
+  "ui.rules.day": {
+   "text": "Most per day (dollars)"
+  },
+  "ui.rules.save": {
+   "text": "Save limits"
+  },
+  "ui.rules.pause_cat": {
+   "text": "Pause {cat}"
+  },
+  "ui.rules.resume_cat": {
+   "text": "Resume {cat}"
+  },
+  "ui.rules.progress": {
+   "text": "Approvals toward the next step: {n} of 3"
+  },
+  "ui.rules.limits_note": {
+   "text": "Within limits can never go above {cap} per item."
+  },
+  "ui.rules.voice_hint": {
+   "text": "You can also say: Set groceries limit to 30 dollars."
+  },
+  "ui.rules.sentence": {
+   "text": "Your rule in plain words"
+  },
+  "ui.orders.title": {
+   "text": "Orders and receipts"
+  },
+  "ui.orders.empty": {
+   "text": "No orders yet."
+  },
+  "ui.orders.undo": {
+   "text": "Undo (cancel and refund)"
+  },
+  "ui.orders.report": {
+   "text": "Something was wrong"
+  },
+  "ui.orders.reconcile": {
+   "text": "Check with the store"
+  },
+  "ui.orders.retry": {
+   "text": "Try again safely"
+  },
+  "ui.orders.receipts": {
+   "text": "Receipts in this order"
+  },
+  "ui.orders.verify": {
+   "text": "Verify receipts"
+  },
+  "ui.orders.verify_hint": {
+   "text": "Recomputes the whole receipt chain and names the first record that changed."
+  },
+  "ui.orders.story": {
+   "text": "In plain words"
+  },
+  "ui.orders.raw": {
+   "text": "Details"
+  },
+  "ui.orders.approve": {
+   "text": "Review and approve"
+  },
+  "ui.orders.decline": {
+   "text": "Decline"
+  },
+  "ui.orders.rule": {
+   "text": "Rule"
+  },
+  "ui.orders.payref": {
+   "text": "Payment reference"
+  },
+  "ui.orders.flags": {
+   "text": "Flags"
+  },
+  "ui.orders.qty": {
+   "text": "Quantity {n}"
+  },
+  "ui.orders.charges": {
+   "text": "Charges for this order: {n}"
+  },
+  "ui.error.render": {
+   "text": "The page could not draw your data. Details are in the browser console."
+  },
+  "ui.error.start": {
+   "text": "Nudge could not start. Retry in a moment."
+  },
+  "ui.retry": {
+   "text": "Retry"
+  },
+  "ui.code.no_session": {
+   "text": "There is no purchase waiting for a code. Choose something to buy first."
+  },
+  "ui.orders.returns": {
+   "text": "Returns"
+  },
+  "ui.problem.title": {
+   "text": "What went wrong?"
+  },
+  "ui.problem.wrong_item": {
+   "text": "Wrong item"
+  },
+  "ui.problem.late": {
+   "text": "Arrived late"
+  },
+  "ui.problem.not_as_described": {
+   "text": "Not as described"
+  },
+  "ui.problem.didnt_want": {
+   "text": "I did not want this"
+  },
+  "ui.demo.title": {
+   "text": "Demo controls"
+  },
+  "ui.demo.note": {
+   "text": "These controls exist for the demo and are not part of the shopper experience."
+  },
+  "ui.demo.profile_demo": {
+   "text": "Load demo profile (Maya)"
+  },
+  "ui.demo.profile_fresh": {
+   "text": "Start fresh (nothing turned on)"
+  },
+  "ui.demo.advance": {
+   "text": "Move the demo clock forward"
+  },
+  "ui.demo.h1": {
+   "text": "1 hour"
+  },
+  "ui.demo.h25": {
+   "text": "25 hours"
+  },
+  "ui.demo.h168": {
+   "text": "7 days"
+  },
+  "ui.demo.fault": {
+   "text": "Next payment behaves like"
+  },
+  "ui.fault.none": {
+   "text": "Normal"
+  },
+  "ui.fault.timeout_after_accept": {
+   "text": "Times out after the store accepted it"
+  },
+  "ui.fault.timeout_before_accept": {
+   "text": "Times out before the store got it"
+  },
+  "ui.fault.reject_next": {
+   "text": "Store declines it"
+  },
+  "ui.demo.tamper": {
+   "text": "Show what tampering looks like (on a copy)"
+  },
+  "ui.demo.payments": {
+   "text": "Running total for this whole demo, all orders: {made} payments accepted by the mock store, {net} after refunds. Each order card shows its own charge count."
+  },
+  "ui.footer": {
+   "text": "Independent prototype with sample products, sample prices and a mock payment step. Not affiliated with or endorsed by any retailer or voice assistant maker."
+  },
+  "ui.loading": {
+   "text": "Loading"
+  },
+  "ui.error": {
+   "text": "Something went wrong. Try again."
+  },
+  "ui.stage.confirm": {
+   "text": "Waiting for your yes or no"
+  },
+  "ui.stage.stepup": {
+   "text": "Waiting for the phone code"
+  },
+  "err.NO_READBACK": {
+   "text": "There is no read-back open. Prepare an order first so I can read it back to you."
+  },
+  "err.CODE_TOO_EARLY": {
+   "text": "No code has been asked for yet. Give your yes first."
+  },
+  "transcript.yes": {
+   "text": "Yes"
+  },
+  "transcript.no": {
+   "text": "No"
+  },
+  "ui.mcp_log": {
+   "text": "Tool calls this page made (Model Context Protocol)"
+  },
+  "ui.mcp_hint": {
+   "text": "Every purchase step above is a tool call to the local server at /mcp. This page is the client."
+  },
+  "err.NOT_AUTHORIZED": {
+   "text": "Only a person using the Nudge page can do that. Nothing was changed."
+  },
+  "err.NEED_APPROVALS": {
+   "text": "Nudge needs {need} approved {cat} orders before it can buy within limits. You have {have} so far."
+  },
+  "err.DAY_BELOW_ITEM": {
+   "text": "The daily limit ({day}) cannot be lower than the per item limit ({item}). Nothing was saved."
+  },
+  "err.DAY_TOO_HIGH": {
+   "text": "The daily limit can be at most {cap}. Nothing was saved."
+  },
+  "err.NO_PROPOSAL": {
+   "text": "That change is not waiting for you any more. Nothing changed."
+  },
+  "err.PROPOSAL_EXPIRED": {
+   "text": "That change ran out of time. Nothing changed. Ask again to see the current terms."
+  },
+  "err.PROPOSAL_STALE": {
+   "text": "Things changed since that was shown, so I did not apply it. Ask again to see the current terms."
+  },
+  "err.UNRESOLVED_ORDER": {
+   "text": "An earlier order for {item} ({order}) is not settled yet: {status}. Use Check with the store first, so you are not charged twice."
+  },
+  "err.PROPOSAL_MISMATCH": {
+   "text": "That answer was for a different read-back, so nothing was bought. Ask again to hear the current one."
+  },
+  "err.TERMS_CHANGED": {
+   "text": "The price or delivery changed since I read it back. Nothing was bought. Ask again to hear the new terms."
+  },
+  "err.READBACK_EXPIRED": {
+   "text": "That read-back ran out of time. Nothing was bought. Ask again."
+  },
+  "err.STEPUP_WRONG": {
+   "text": "That code does not match. {left} tries left. Nothing was bought."
+  },
+  "err.STEPUP_LOCKED": {
+   "text": "Too many wrong codes. Nothing was bought. The orders are still waiting."
+  },
+  "err.STEPUP_EXPIRED": {
+   "text": "That code ran out of time. Nothing was bought. The orders are still waiting."
+  },
+  "err.CODE_REQUIRED": {
+   "text": "A phone code is needed first. It was sent to the simulated phone."
+  },
+  "err.OUTCOME_UNKNOWN": {
+   "text": "I could not confirm that the order went through. You will not be charged twice."
+  },
+  "err.OUTCOME_FAILED": {
+   "text": "The order did not go through. You were not charged."
+  },
+  "cmd.negated": {
+   "text": "I heard a no in that, so I did not do anything. If you want it, say it plainly, for example: resume groceries."
+  },
+  "cmd.unsupported_period": {
+   "text": "I can only set a limit per item or per day, not per week or month."
+  },
+  "session.stopped": {
+   "text": "Stopped. Nothing was bought."
+  },
+  "proposal.limits": {
+   "text": "Switch {cat} to Within limits? I would buy up to {item} each and {day} a day from {merchants}, until {until}. Nothing changes until you confirm."
+  },
+  "proposal.ask": {
+   "text": "Switch {cat} to Ask first? I would prepare orders and ask for your yes each time. Nothing changes until you confirm."
+  },
+  "proposal.limit_change": {
+   "text": "Change the {cat} limits to {item} each and {day} a day? Nothing changes until you confirm."
+  },
+  "proposal.say_yes": {
+   "text": "Say yes or tap Confirm."
+  },
+  "proposal.waiting": {
+   "text": "Waiting for the person to confirm this in the Nudge page. Nothing has changed yet."
+  },
+  "log.limits_set": {
+   "text": "{cat} limits are now {item} each and {day} a day."
+  },
+  "log.recovered": {
+   "text": "After a restart I checked {item}: {status}."
+  },
+  "did_not.UNRESOLVED": {
+   "text": "I did not prepare {item}. An earlier order for it is not settled yet. Use Check with the store first."
+  },
+  "ui.autonomy.title": {
+   "text": "Waiting for your confirmation"
+  },
+  "ui.autonomy.confirm": {
+   "text": "Confirm"
+  },
+  "ui.autonomy.cancel": {
+   "text": "Cancel"
+  },
+  "ui.mcp.retry": {
+   "text": "Could not reach the local tool server. Try again."
+  },
+  "ui.mcp.reconnected": {
+   "text": "Reconnected to the local tool server."
+  },
+  "ui.demo.restored": {
+   "text": "Restored from the saved receipts and state."
+  }
+ }
+}
