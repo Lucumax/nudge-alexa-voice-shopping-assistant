@@ -1,8 +1,38 @@
 # Nudge
 
-Nudge is a simulated voice shopping assistant with a human in the loop. It suggests items with a visible reason, asks for approval before it buys, and can be given bounded freedom to buy small items on its own, but only after the user's own approvals. Every purchase goes through an approval-receipt core and leaves signed, hash-chained receipts that can be verified.
+**A voice shopping helper that asks before it spends your money, and earns more freedom only when you give it.**
 
-Nudge was built for the Amazon Build, Ship, Shape hackathon (Alexa+ track, simulated-experience path). It is independent work and is not affiliated with or endorsed by Amazon. Amazon store names and Amazon private-label brand names appear in the demo because this entry is for the Amazon hackathon. The products, prices, ratings and delivery dates are sample data: nothing is sold or priced by Amazon, and no real Amazon service is called. Everything in it is a simulation: sample products, sample prices, a mock payment step and a simulated phone. It makes no external store or payment calls, uses no real card and talks to no real store. The page talks only to the local server that serves it.
+Nudge is a simulated Alexa+ shopping assistant. It suggests everyday items and shows why. It reads each order back before you approve it. After you approve three orders in a category at Ask first, it can offer to buy small items there on its own, inside limits you set and can take back at any time. Every purchase step leaves a receipt you can check.
+
+> **Simulation only.** Sample products, sample prices, a mock payment step and a simulated phone. No real card, store or money is involved. Nudge makes no external store or payment calls; the page talks only to the local server that serves it.
+
+## Why it matters
+
+Repeat errands such as coffee, pasta and paper towels are a good job for a voice assistant, but only if you stay in charge of the money. A common design offers a single switch: the assistant either asks every time or is trusted with a card. Nudge explores the space in between:
+
+- a per-category dial with three levels: Suggest, Ask first and Within limits;
+- a plain-words read-back before every purchase that needs your yes;
+- a 4-digit code on a simulated phone for orders of $100 or more;
+- undo for 24 hours, and a step back to Ask first when you report a problem with, or undo, an order Nudge bought on its own;
+- signed, hash-chained receipts: each receipt carries a fingerprint (hash) of the one before it, so Verify receipts detects a later edit to any of them.
+
+Under the hood, the page talks to Nudge through MCP (Model Context Protocol, an open standard that lets an AI assistant call outside tools). A connected assistant can propose a purchase through the same tools, but only the person on the page can say yes.
+
+## Try it in three commands
+
+You need Python 3.11 or later. Running the app needs no installed packages. From the repository folder:
+
+```sh
+python -m app                                   # 1. start Nudge, then open http://127.0.0.1:8765/
+python -m pip install -r requirements-dev.txt   # 2. install pytest (needed only for the tests)
+python -m pytest -q                             # 3. run the tests: 297 pass
+```
+
+On macOS and Linux, use `python3`. The first start loads the demo profile "Maya". To start over, run `python -m app --reset-demo`. More options and a suggested walkthrough are in [Run and test](#run-and-test).
+
+## About this entry
+
+Nudge was built for the Amazon Build, Ship, Shape hackathon (Alexa+ track, simulated-experience path). It is independent work and is not affiliated with or endorsed by Amazon. Amazon store names and Amazon private-label brand names appear in the demo because this entry is for the Amazon hackathon. The products, prices, ratings and delivery dates are sample data: nothing is sold or priced by Amazon, and no real Amazon service is called.
 
 License: MIT (see [LICENSE](LICENSE)).
 
@@ -12,7 +42,8 @@ Mini challenges: none entered.
 
 ## Contents
 
-- [The problem](#the-problem)
+- [Why it matters](#why-it-matters)
+- [Try it in three commands](#try-it-in-three-commands)
 - [How it works](#how-it-works)
 - [Architecture](#architecture)
 - [MCP server](#mcp-server)
@@ -23,10 +54,6 @@ Mini challenges: none entered.
 - [Limitations](#limitations)
 - [Built during the hackathon period](#built-during-the-hackathon-period)
 - [License](#license)
-
-## The problem
-
-A voice assistant that handles repeat household errands is useful. One that spends money without a clear, checkable boundary is not. A common design offers a single switch: either the assistant asks every time, or it is trusted with a card. Nudge explores the space in between: a per-category dial, a plain-words read-back before every purchase that needs approval, a second factor for large amounts, a way to reverse a purchase, and a record the user can verify.
 
 ## How it works
 
