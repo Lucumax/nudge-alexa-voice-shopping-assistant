@@ -255,7 +255,55 @@ def test_restore_rejects_non_object_state_file(tmp_path):
         NudgeService(path, key="k")
 
 
-# ---------- 7. quantity in digest and large-pending summaries
+# ---------- 7. quantity in digest and large-pending summaries; no "null" text; honest origin labels
+def _top_level_args(src, start):
+    """Top-level arguments of the call whose '(' is at src[start] (string literals skipped)."""
+    depth, i, quote, args, cur = 0, start, None, [], []
+    while i < len(src):
+        ch = src[i]
+        if quote:
+            cur.append(ch)
+            if ch == "\\":
+                cur.append(src[i + 1])
+                i += 2
+                continue
+            if ch == quote:
+                quote = None
+        elif ch in "\"'`":
+            quote = ch
+            cur.append(ch)
+        elif ch in "([{":
+            depth += 1
+            if depth > 1:
+                cur.append(ch)
+        elif ch in ")]}":
+            depth -= 1
+            if depth == 0:
+                args.append("".join(cur).strip())
+                return args
+            cur.append(ch)
+        elif ch == "," and depth == 1:
+            args.append("".join(cur).strip())
+            cur = []
+        else:
+            cur.append(ch)
+        i += 1
+    raise AssertionError("unbalanced call")
+
+
 def test_digest_and_pending_summaries_show_quantity():
+    import re
     js = _js()
     assert 'S("ui.orders.qty", {n: i.qty})' in js and 'S("ui.orders.qty", {n: o.qty})' in js
+    # replaceChildren prints a null child as the word "null" (el() filters nulls, replaceChildren does not)
+    bad = []
+    for m in re.finditer(r"\.replaceChildren\(", js):
+        for arg in _top_level_args(js, m.end() - 1):
+            a = re.sub(r"//[^\n]*", "", arg).strip()
+            if a == "null" or re.search(r"(:|\|\|)\s*null$", a):
+                bad.append(a[:80])
+    assert not bad, bad
+    # an order prepared by the daily check is labeled by origin, never as already approved
+    strings = json.load(open(os.path.join(HERE, "copy", "strings.json"), encoding="utf-8"))["strings"]
+    for key in ("source.assistant", "source.shop", "source.suggestion"):
+        assert "approved" not in strings[key]["text"].lower(), key

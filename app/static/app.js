@@ -290,7 +290,7 @@ function renderToday() {
           el("input", {type: "checkbox", checked: !leaveOut.has(i.id), onchange: ev => {
             ev.target.checked ? leaveOut.delete(i.id) : leaveOut.add(i.id); render(); }}),
           " ", el("span", {text: i.product.name + ", " + S("ui.orders.qty", {n: i.qty}) + ", " + i.product.merchant + ", " + i.amount + ", " + i.delivery}))))),
-      total >= 10000 ? el("p", {class: "note", text: S("ui.digest.stepup")}) : null,
+      ...(total >= 10000 ? [el("p", {class: "note", text: S("ui.digest.stepup")})] : []),   // replaceChildren would print a null
       el("button", {class: "btn primary", type: "button", disabled: kept.length === 0,
         onclick: () => tool("start_digest", {leave_out: [...leaveOut]}),
         text: S("ui.digest.approve", {count: kept.length, total: "$" + (total / 100).toFixed(2)})}));
